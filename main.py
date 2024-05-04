@@ -41,9 +41,9 @@ class DVD:
         dvd.x_position += dvd.x_velocity
         dvd.y_position += dvd.y_velocity
 
-        if dvd.x_position <= 0 or dvd.x_position + dvd.width >= screen.width:
+        if dvd.x_position <= 0 or dvd.x_position + dvd.width - 6 >= screen.width:
             dvd.x_velocity *= -1
-        if dvd.y_position <= 0 or dvd.y_position + dvd.height - 20 >= screen.height:
+        if dvd.y_position <= 0 or dvd.y_position + dvd.height - 18 >= screen.height:
             dvd.y_velocity *= -1
 
     def draw(self):
